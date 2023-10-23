@@ -1,0 +1,331 @@
+†18:55:14.773 [Test worker] INFO  c.intuit.karate.core.FeatureRuntime - classpath:Books/books.feature - call by tag at line 13: crear
+>18:55:15.337 [Test worker] DEBUG com.intuit.karate - request:
+61 > POST https://restful-booker.herokuapp.com/booking
+1 > Accept: application/json
+21 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 175
+'1 > Host: restful-booker.herokuapp.com
+1 > Connection: Keep-Alive
+71 > User-Agent: Apache-HttpClient/4.5.13 (Java/15.0.2)
+"1 > Accept-Encoding: gzip,deflate
+°{"firstname":"Pedro","lastname":"Gutierrez","totalprice":"100","depositpaid":"true","bookingdates":{"checkin":"2023-03-01","checkout":"2023-04-01"},"additionalneeds":"Comics"}
+
+X18:55:16.072 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 735
+1 < 200
+1 < Server: Cowboy
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+21 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 200
+-1 < Etag: W/"c8-dQN87H7F0Xj3R4I+Zw8snjMFKXY"
+(1 < Date: Sun, 22 Oct 2023 23:55:15 GMT
+1 < Via: 1.1 vegur
+É{"bookingid":1731,"booking":{"firstname":"Pedro","lastname":"Gutierrez","totalprice":100,"depositpaid":true,"bookingdates":{"checkin":"2023-03-01","checkout":"2023-04-01"},"additionalneeds":"Comics"}}
+
+Š18:55:16.141 [Test worker] INFO  c.intuit.karate.core.FeatureRuntime - classpath:Books/books.feature - call by tag at line 27: consultar
+>18:55:16.172 [Test worker] DEBUG com.intuit.karate - request:
+:2 > GET https://restful-booker.herokuapp.com/booking/1731
+2 > Accept: application/json
+'2 > Host: restful-booker.herokuapp.com
+2 > Connection: Keep-Alive
+72 > User-Agent: Apache-HttpClient/4.5.13 (Java/15.0.2)
+"2 > Accept-Encoding: gzip,deflate
+
+
+X18:55:16.500 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 328
+2 < 200
+2 < Server: Cowboy
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+22 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 171
+-2 < Etag: W/"ab-fVULJtmF2aXWd7RK3JVG5zEKGLs"
+(2 < Date: Sun, 22 Oct 2023 23:55:15 GMT
+2 < Via: 1.1 vegur
+¬{"firstname":"Pedro","lastname":"Gutierrez","totalprice":100,"depositpaid":true,"bookingdates":{"checkin":"2023-03-01","checkout":"2023-04-01"},"additionalneeds":"Comics"}
+
+‹18:55:16.516 [Test worker] INFO  c.intuit.karate.core.FeatureRuntime - classpath:Books/books.feature - call by tag at line 39: actualizar
+…18:55:16.531 [Test worker] INFO  c.intuit.karate.core.FeatureRuntime - classpath:Books/books.feature - call by tag at line 5: token
+>18:55:16.547 [Test worker] DEBUG com.intuit.karate - request:
+33 > POST https://restful-booker.herokuapp.com/auth
+23 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 45
+'3 > Host: restful-booker.herokuapp.com
+3 > Connection: Keep-Alive
+73 > User-Agent: Apache-HttpClient/4.5.13 (Java/15.0.2)
+"3 > Accept-Encoding: gzip,deflate
+.{"username":"admin","password":"password123"}
+
+X18:55:16.847 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 300
+3 < 200
+3 < Server: Cowboy
+Ö3 < Report-To: {"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1698018915&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=dnzBqB7PP5IOChc%2FmFlNE85dpT9AOT8sN5DZeN993MM%3D"}]}
+­3 < Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1698018915&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=dnzBqB7PP5IOChc%2FmFlNE85dpT9AOT8sN5DZeN993MM%3D
+3 < Nel: {"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}
+3 < Connection: keep-alive
+3 < X-Powered-By: Express
+23 < Content-Type: application/json; charset=utf-8
+3 < Content-Length: 27
+-3 < Etag: W/"1b-SLASeupM5sAHpQDe7IzW6q5SPB8"
+(3 < Date: Sun, 22 Oct 2023 23:55:15 GMT
+3 < Via: 1.1 vegur
+{"token":"41fe4d0203505c4"}
+
+>18:55:16.880 [Test worker] DEBUG com.intuit.karate - request:
+:4 > PUT https://restful-booker.herokuapp.com/booking/1731
+4 > Accept: application/json
+4 > token: 41fe4d0203505c4
+24 > Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+24 > Content-Type: application/json; charset=UTF-8
+4 > Content-Length: 174
+'4 > Host: restful-booker.herokuapp.com
+4 > Connection: Keep-Alive
+74 > User-Agent: Apache-HttpClient/4.5.13 (Java/15.0.2)
+"4 > Accept-Encoding: gzip,deflate
+¯{"firstname":"Jose","lastname":"Gutierrez","totalprice":"100","depositpaid":"true","bookingdates":{"checkin":"2023-05-12","checkout":"2023-06-28"},"additionalneeds":"Comics"}
+
+X18:55:17.164 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 284
+4 < 200
+4 < Server: Cowboy
+Ô4 < Report-To: {"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1698018916&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=jXtt3C0n7JypexBGHHfFv7n1yloP44JCfAceGLt1a7s%3D"}]}
+«4 < Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1698018916&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=jXtt3C0n7JypexBGHHfFv7n1yloP44JCfAceGLt1a7s%3D
+4 < Nel: {"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}
+4 < Connection: keep-alive
+4 < X-Powered-By: Express
+24 < Content-Type: application/json; charset=utf-8
+4 < Content-Length: 170
+-4 < Etag: W/"aa-L9eaE1kZrH0IME06L/kyybN/nVs"
+(4 < Date: Sun, 22 Oct 2023 23:55:16 GMT
+4 < Via: 1.1 vegur
+«{"firstname":"Jose","lastname":"Gutierrez","totalprice":100,"depositpaid":true,"bookingdates":{"checkin":"2023-05-12","checkout":"2023-06-28"},"additionalneeds":"Comics"}
+
+‰18:55:17.179 [Test worker] INFO  c.intuit.karate.core.FeatureRuntime - classpath:Books/books.feature - call by tag at line 55: eliminar
+…18:55:17.195 [Test worker] INFO  c.intuit.karate.core.FeatureRuntime - classpath:Books/books.feature - call by tag at line 5: token
+>18:55:17.226 [Test worker] DEBUG com.intuit.karate - request:
+35 > POST https://restful-booker.herokuapp.com/auth
+25 > Content-Type: application/json; charset=UTF-8
+5 > Content-Length: 45
+'5 > Host: restful-booker.herokuapp.com
+5 > Connection: Keep-Alive
+75 > User-Agent: Apache-HttpClient/4.5.13 (Java/15.0.2)
+"5 > Accept-Encoding: gzip,deflate
+.{"username":"admin","password":"password123"}
+
+X18:55:17.518 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 292
+5 < 200
+5 < Server: Cowboy
+Ô5 < Report-To: {"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1698018916&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=jXtt3C0n7JypexBGHHfFv7n1yloP44JCfAceGLt1a7s%3D"}]}
+«5 < Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1698018916&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=jXtt3C0n7JypexBGHHfFv7n1yloP44JCfAceGLt1a7s%3D
+5 < Nel: {"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}
+5 < Connection: keep-alive
+5 < X-Powered-By: Express
+25 < Content-Type: application/json; charset=utf-8
+5 < Content-Length: 27
+-5 < Etag: W/"1b-3fguR2R8Foock5+qGMc6vxrN0mg"
+(5 < Date: Sun, 22 Oct 2023 23:55:16 GMT
+5 < Via: 1.1 vegur
+{"token":"44219ea296a6ed3"}
+
+‡18:55:17.518 [Test worker] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'token' with new value: $.token
+>18:55:17.518 [Test worker] DEBUG com.intuit.karate - request:
+=6 > DELETE https://restful-booker.herokuapp.com/booking/1731
+6 > token: 44219ea296a6ed3
+26 > Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+'6 > Host: restful-booker.herokuapp.com
+6 > Connection: Keep-Alive
+76 > User-Agent: Apache-HttpClient/4.5.13 (Java/15.0.2)
+"6 > Accept-Encoding: gzip,deflate
+
+
+X18:55:17.830 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 312
+6 < 201
+6 < Server: Cowboy
+Ô6 < Report-To: {"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1698018916&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=jXtt3C0n7JypexBGHHfFv7n1yloP44JCfAceGLt1a7s%3D"}]}
+«6 < Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1698018916&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=jXtt3C0n7JypexBGHHfFv7n1yloP44JCfAceGLt1a7s%3D
+6 < Nel: {"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}
+6 < Connection: keep-alive
+6 < X-Powered-By: Express
+,6 < Content-Type: text/plain; charset=utf-8
+6 < Content-Length: 7
+,6 < Etag: W/"7-rM9AyJuqT6iOan/xHh+AW+7K/T8"
+(6 < Date: Sun, 22 Oct 2023 23:55:16 GMT
+6 < Via: 1.1 vegur
+Created
+
+†18:55:17.861 [Test worker] INFO  c.intuit.karate.core.FeatureRuntime - classpath:Books/books.feature - call by tag at line 13: crear
+>18:55:17.893 [Test worker] DEBUG com.intuit.karate - request:
+61 > POST https://restful-booker.herokuapp.com/booking
+1 > Accept: application/json
+21 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 176
+'1 > Host: restful-booker.herokuapp.com
+1 > Connection: Keep-Alive
+71 > User-Agent: Apache-HttpClient/4.5.13 (Java/15.0.2)
+"1 > Accept-Encoding: gzip,deflate
+±{"firstname":"Javier","lastname":"Jaramillo","totalprice":"356","depositpaid":"true","bookingdates":{"checkin":"2023-03-15","checkout":"2023-04-15"},"additionalneeds":"Terror"}
+
+X18:55:18.190 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 297
+1 < 200
+1 < Server: Cowboy
+Ø1 < Report-To: {"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1698018917&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=YQ%2BH%2Bj0Ep372qhe4B8AfwwpOnSkCTS6VGXFmT7ksSf4%3D"}]}
+¯1 < Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1698018917&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=YQ%2BH%2Bj0Ep372qhe4B8AfwwpOnSkCTS6VGXFmT7ksSf4%3D
+1 < Nel: {"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+21 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 201
+-1 < Etag: W/"c9-AxXeRfAOcKrtUAH/fESBFKJZGhU"
+(1 < Date: Sun, 22 Oct 2023 23:55:17 GMT
+1 < Via: 1.1 vegur
+Ê{"bookingid":1750,"booking":{"firstname":"Javier","lastname":"Jaramillo","totalprice":356,"depositpaid":true,"bookingdates":{"checkin":"2023-03-15","checkout":"2023-04-15"},"additionalneeds":"Terror"}}
+
+Š18:55:18.205 [Test worker] INFO  c.intuit.karate.core.FeatureRuntime - classpath:Books/books.feature - call by tag at line 27: consultar
+>18:55:18.205 [Test worker] DEBUG com.intuit.karate - request:
+:2 > GET https://restful-booker.herokuapp.com/booking/1750
+2 > Accept: application/json
+'2 > Host: restful-booker.herokuapp.com
+2 > Connection: Keep-Alive
+72 > User-Agent: Apache-HttpClient/4.5.13 (Java/15.0.2)
+"2 > Accept-Encoding: gzip,deflate
+
+
+X18:55:18.533 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 328
+2 < 200
+2 < Server: Cowboy
+Ø2 < Report-To: {"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1698018917&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=YQ%2BH%2Bj0Ep372qhe4B8AfwwpOnSkCTS6VGXFmT7ksSf4%3D"}]}
+¯2 < Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1698018917&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=YQ%2BH%2Bj0Ep372qhe4B8AfwwpOnSkCTS6VGXFmT7ksSf4%3D
+2 < Nel: {"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+22 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 172
+-2 < Etag: W/"ac-k1/XxGQTagFroMMbwsUATk5REMQ"
+(2 < Date: Sun, 22 Oct 2023 23:55:17 GMT
+2 < Via: 1.1 vegur
+­{"firstname":"Javier","lastname":"Jaramillo","totalprice":356,"depositpaid":true,"bookingdates":{"checkin":"2023-03-15","checkout":"2023-04-15"},"additionalneeds":"Terror"}
+
+‹18:55:18.533 [Test worker] INFO  c.intuit.karate.core.FeatureRuntime - classpath:Books/books.feature - call by tag at line 39: actualizar
+…18:55:18.549 [Test worker] INFO  c.intuit.karate.core.FeatureRuntime - classpath:Books/books.feature - call by tag at line 5: token
+>18:55:18.565 [Test worker] DEBUG com.intuit.karate - request:
+33 > POST https://restful-booker.herokuapp.com/auth
+23 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 45
+'3 > Host: restful-booker.herokuapp.com
+3 > Connection: Keep-Alive
+73 > User-Agent: Apache-HttpClient/4.5.13 (Java/15.0.2)
+"3 > Accept-Encoding: gzip,deflate
+.{"username":"admin","password":"password123"}
+
+X18:55:18.867 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 287
+3 < 200
+3 < Server: Cowboy
+Ø3 < Report-To: {"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1698018918&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=oGC6gdlp%2B96o2QDcDRmoKIwtMCm5l9vnl1JVr%2BoloV4%3D"}]}
+¯3 < Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1698018918&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=oGC6gdlp%2B96o2QDcDRmoKIwtMCm5l9vnl1JVr%2BoloV4%3D
+3 < Nel: {"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}
+3 < Connection: keep-alive
+3 < X-Powered-By: Express
+23 < Content-Type: application/json; charset=utf-8
+3 < Content-Length: 27
+-3 < Etag: W/"1b-Tj/uYwFkQdedPj545oN03WYLgUY"
+(3 < Date: Sun, 22 Oct 2023 23:55:18 GMT
+3 < Via: 1.1 vegur
+{"token":"5db4646f06e3a4b"}
+
+>18:55:18.883 [Test worker] DEBUG com.intuit.karate - request:
+:4 > PUT https://restful-booker.herokuapp.com/booking/1750
+4 > Accept: application/json
+4 > token: 5db4646f06e3a4b
+24 > Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+24 > Content-Type: application/json; charset=UTF-8
+4 > Content-Length: 171
+'4 > Host: restful-booker.herokuapp.com
+4 > Connection: Keep-Alive
+74 > User-Agent: Apache-HttpClient/4.5.13 (Java/15.0.2)
+"4 > Accept-Encoding: gzip,deflate
+¬{"firstname":"Javier","lastname":"Mora","totalprice":"356","depositpaid":"true","bookingdates":{"checkin":"2023-06-20","checkout":"2023-07-20"},"additionalneeds":"Terror"}
+
+X18:55:19.211 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 328
+4 < 200
+4 < Server: Cowboy
+Ø4 < Report-To: {"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1698018918&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=oGC6gdlp%2B96o2QDcDRmoKIwtMCm5l9vnl1JVr%2BoloV4%3D"}]}
+¯4 < Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1698018918&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=oGC6gdlp%2B96o2QDcDRmoKIwtMCm5l9vnl1JVr%2BoloV4%3D
+4 < Nel: {"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}
+4 < Connection: keep-alive
+4 < X-Powered-By: Express
+24 < Content-Type: application/json; charset=utf-8
+4 < Content-Length: 167
+-4 < Etag: W/"a7-kGueKgWpDqD8k+GZq7GhQEta7WA"
+(4 < Date: Sun, 22 Oct 2023 23:55:18 GMT
+4 < Via: 1.1 vegur
+¨{"firstname":"Javier","lastname":"Mora","totalprice":356,"depositpaid":true,"bookingdates":{"checkin":"2023-06-20","checkout":"2023-07-20"},"additionalneeds":"Terror"}
+
+‰18:55:19.211 [Test worker] INFO  c.intuit.karate.core.FeatureRuntime - classpath:Books/books.feature - call by tag at line 55: eliminar
+…18:55:19.226 [Test worker] INFO  c.intuit.karate.core.FeatureRuntime - classpath:Books/books.feature - call by tag at line 5: token
+>18:55:19.226 [Test worker] DEBUG com.intuit.karate - request:
+35 > POST https://restful-booker.herokuapp.com/auth
+25 > Content-Type: application/json; charset=UTF-8
+5 > Content-Length: 45
+'5 > Host: restful-booker.herokuapp.com
+5 > Connection: Keep-Alive
+75 > User-Agent: Apache-HttpClient/4.5.13 (Java/15.0.2)
+"5 > Accept-Encoding: gzip,deflate
+.{"username":"admin","password":"password123"}
+
+X18:55:19.528 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 302
+5 < 200
+5 < Server: Cowboy
+Ø5 < Report-To: {"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1698018918&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=oGC6gdlp%2B96o2QDcDRmoKIwtMCm5l9vnl1JVr%2BoloV4%3D"}]}
+¯5 < Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1698018918&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=oGC6gdlp%2B96o2QDcDRmoKIwtMCm5l9vnl1JVr%2BoloV4%3D
+5 < Nel: {"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}
+5 < Connection: keep-alive
+5 < X-Powered-By: Express
+25 < Content-Type: application/json; charset=utf-8
+5 < Content-Length: 27
+-5 < Etag: W/"1b-hZuSS6bKcKnXI4iMq3HJIiSiE9A"
+(5 < Date: Sun, 22 Oct 2023 23:55:18 GMT
+5 < Via: 1.1 vegur
+{"token":"322a550a765d766"}
+
+‡18:55:19.528 [Test worker] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'token' with new value: $.token
+>18:55:19.543 [Test worker] DEBUG com.intuit.karate - request:
+=6 > DELETE https://restful-booker.herokuapp.com/booking/1750
+6 > token: 322a550a765d766
+26 > Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+'6 > Host: restful-booker.herokuapp.com
+6 > Connection: Keep-Alive
+76 > User-Agent: Apache-HttpClient/4.5.13 (Java/15.0.2)
+"6 > Accept-Encoding: gzip,deflate
+
+
+X18:55:19.860 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 317
+6 < 201
+6 < Server: Cowboy
+6 < Connection: keep-alive
+6 < X-Powered-By: Express
+,6 < Content-Type: text/plain; charset=utf-8
+6 < Content-Length: 7
+,6 < Etag: W/"7-rM9AyJuqT6iOan/xHh+AW+7K/T8"
+(6 < Date: Sun, 22 Oct 2023 23:55:18 GMT
+6 < Via: 1.1 vegur
+Created
+
+:---------------------------------------------------------
+'feature: classpath:Books/books.feature
+7scenarios:  2 | passed:  2 | failed:  0 | time: 5,0960
+:---------------------------------------------------------
+
+€18:55:21.606 [Test worker] INFO  com.intuit.karate.Suite - <<pass>> feature 2 of 2 (0 remaining) classpath:Books/books.feature
+_18:55:21.606 [Test worker] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+Karate version: 1.2.0.RC4
+8======================================================
+6elapsed:  10,01 | threads:    1 | thread time: 5,10 
+4features:     1 | skipped:    1 | efficiency: 0,51
+-scenarios:    2 | passed:     2 | failed: 0
+8======================================================
+
+FHTML report: (paste into browser to view) | Karate version: 1.2.0.RC4
+[file:///C:/Users/jhons/IdeaProjects/Libros-karate/build/karate-reports/karate-summary.html
+D===================================================================
+
+ Uoct. 22, 2023 6:55:22 P.Â M. net.masterthought.cucumber.ReportParser parseJsonFiles
+ zINFORMACIÃ“N: File 'C:\Users\jhons\IdeaProjects\Libros-karate\build\karate-reports\Books.books.json' contains 1 features
