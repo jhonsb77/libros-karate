@@ -13,7 +13,7 @@ para ejecutarsen en un unico test con el tag @runnerGeneral
 - books-especificos.feature: se encuentran los escenarios para que puedan ser
 ejecutados de manera independiente.
 
-nota: para que funcionen correctamente es necesario cambiar el campo id por
+nota: para que funcionen correctamente cada uno de los escenarios individuales es necesario cambiar el campo id por
 el id que se desea consumir
 ![img.png](img.png)
 
