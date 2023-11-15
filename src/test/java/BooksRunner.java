@@ -26,5 +26,4 @@ public class BooksRunner {
         ReportBuilder reportBuilder = new ReportBuilder(jsonPaths, config);
         reportBuilder.generateReports();
     }
-
 }
