@@ -1,9 +1,11 @@
 import com.intuit.karate.Results;
 import com.intuit.karate.Runner;
+import com.intuit.karate.junit5.Karate;
 import net.masterthought.cucumber.Configuration;
 import net.masterthought.cucumber.ReportBuilder;
 import org.apache.commons.io.FileUtils;
-import org.junit.jupiter.api.Test;
+//import org.junit.jupiter.api.Test;
+
 
 import java.io.File;
 import java.util.ArrayList;
@@ -12,10 +14,16 @@ import java.util.List;
 
 public class BooksRunner {
 
-    @Test
-    void testParallel(){
-        Results results =  Runner.path("classpath:Books").outputCucumberJson(true).tags("@runnerGeneral").parallel(1);
-        generateReport(results.getReportDir());
+//    @Karate.Test
+//    void testParallel(){
+//        //String tag=System.getProperty("tag");
+//        Results results =  Runner.path("classpath:Books").outputCucumberJson(true).tags("@crearEspecifico").parallel(1);
+//        generateReport(results.getReportDir());
+//    }
+
+    @Karate.Test
+    Karate testTags() {
+        return Karate.run("classpath:Books").tags("@crearEspecifico").relativeTo(getClass());
     }
 
     public static void generateReport(String karateOutputPath){
