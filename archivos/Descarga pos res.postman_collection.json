@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "b9cff1bb-1e1f-4462-8a89-4fce227f5b5b",
+		"name": "Descarga pos res",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Descarga parcial",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"id\":0,\"name\":\"MessageTypeIndicator\",\"value\": \"0800\"},{\"id\":41,\"name\":\"TerminalID\",\"value\":\"000DG394\"},{\"id\":48,\"name\":\"PrivateAddData\",\"value\":\"{\\\"documento\\\":\\\"4\\\",\\\"tipo\\\":\\\"OS\\\"}\"},{\"id\":57,\"name\":\"p57\",\"value\":null},{\"id\":61,\"name\":\"p61\",\"value\":\"DATOS MON\"},{\"id\":63,\"name\":\"p63\",\"value\":\"000000000000000PFIW05_C01201132831470000000000\"}]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-new-orquestador-gestor-terminales-qa.apps.cluospruv4.credivisa.local",
+					"protocol": "https",
+					"host": [
+						"api-new-orquestador-gestor-terminales-qa",
+						"apps",
+						"cluospruv4",
+						"credivisa",
+						"local"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirmar descarga",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"id\":0,\"name\":\"MessageTypeIndicator\",\"value\": \"0800\"},{\"id\":41,\"name\":\"TerminalID\",\"value\":\"000DG394\"},{\"id\":48,\"name\":\"PrivateAddData\",\"value\":null},{\"id\":57,\"name\":\"p57\",\"value\": \"{\\\"paquete\\\":[{\\\"id\\\":\\\"4\\\",\\\"estado\\\":\\\"1\\\",\\\"tipo\\\":\\\"OS\\\"}]}\"},{\"id\":61,\"name\":\"p61\",\"value\":\"DATOS MON\"},{\"id\":63,\"name\":\"p63\",\"value\":\"000000000000000PFIW05_C01201132831470000000000\"}]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-new-orquestador-gestor-terminales-qa.apps.cluospruv4.credivisa.local",
+					"protocol": "https",
+					"host": [
+						"api-new-orquestador-gestor-terminales-qa",
+						"apps",
+						"cluospruv4",
+						"credivisa",
+						"local"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Monitoreo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"id\":0,\"name\":\"MessageTypeIndicator\",\"value\":\"0840\"},{\"id\":41,\"name\":\"TerminalID\",\"value\":\"000DG394\"},{\"id\":61,\"name\":\"p61\",\"value\":\"ME:1,NS:87550553479,NT:000DG394,NB:0,VC:PFIA05_C03,VD:V04.01.00,VI:V05.03.03,IS:0,TE:0,TF:0,TR:0,TT:0,FC:0,AV:null,KV:null,PP:null,PW:null,SV:null,AP:null,\"},{\"id\":63,\"name\":\"p63\",\"value\":\"  000000000000000PFIA05_C03875505534790000000000\"}]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-new-orquestador-gestor-terminales-qa.apps.cluospruv4.credivisa.local",
+					"protocol": "https",
+					"host": [
+						"api-new-orquestador-gestor-terminales-qa",
+						"apps",
+						"cluospruv4",
+						"credivisa",
+						"local"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Descarga Inicial",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"id\":0,\"name\":\"MessageTypeIndicator\",\"value\": \"0800\"},{\"id\":41,\"name\":\"TerminalID\",\"value\":\"000DG394\"},{\"id\":48,\"name\":\"PrivateAddData\",\"value\":null},{\"id\":57,\"name\":\"p57\",\"value\":\"{\\\"full\\\":\\\"0\\\",\\\"last\\\":\\\"0\\\",\\\"paquete\\\":[{\\\"id\\\":\\\"0\\\",\\\"tipo\\\":\\\"None\\\",\\\"estado\\\":\\\"0|0|0|0\\\"}]}\"},{\"id\":61,\"name\":\"p61\",\"value\":\"DATOS MON\"},{\"id\":62,\"name\":\"p62\",\"value\":\"30000\"},{\"id\":63,\"name\":\"p63\",\"value\":\"000000000000000PFIW05_C01201132831470000000000\"}]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-new-orquestador-gestor-terminales-qa.apps.cluospruv4.credivisa.local",
+					"protocol": "https",
+					"host": [
+						"api-new-orquestador-gestor-terminales-qa",
+						"apps",
+						"cluospruv4",
+						"credivisa",
+						"local"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
